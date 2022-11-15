@@ -1,0 +1,50 @@
+
+<input class="newTask" type="text" placeholder="Write your next task here..." [(ngModel)]="list" (dblclick)="newtask()">
+<h1>Pending Tasks</h1>
+<ul>
+        <li *ngFor="let task of tasksPending;let index = index " class="tasksPendint">
+            <div class="taskPendint">
+                <label for="">
+                    <input id="1" class='labels' type="checkbox" [(ngModel)]="task.isDone" (click)="done()">
+                    <span>
+                    </span>
+                </label>
+                
+                <!-- <p>{{task.isDone}}</p>  -->
+                {{task.title}}
+                <app-date></app-date> 
+            </div>                            
+            <div class="labes-box">
+                
+                <label class="mycheckbox">
+                    <input type="checkbox"  class="labels"[(ngModel)]="task.favorites" (click)="favorites()">
+                    <span><app-favorites ></app-favorites></span>
+                </label>
+                <app-color-checkbox></app-color-checkbox>
+                <input type="color" name="" id="" class="color">
+                <!-- <img src="../../../assets/x.svg" alt="" class="labels"> -->
+                <app-delete-task></app-delete-task>
+                <input type="checkbox"  class="labels" [(ngModel)]="task.delete" (click)="delet()">
+                
+            </div>   
+        </li>
+</ul>
+
+<h1>Tasks Done</h1>
+<ul>
+    <li *ngFor="let taskDone of tasksDone;let index = index " class="tasksDone">
+        <div class="taskDone">
+            <input class="labels" type="checkbox" [(ngModel)]="taskDone.isDone" (click)="noDone()">
+            <!-- <p>{{taskDone.isDone}}</p>  -->
+            {{taskDone.title}}
+            <app-date></app-date>
+            
+        </div>
+            
+        <div class="labes-box1">
+            <app-delete-task></app-delete-task>
+            <input type="checkbox"  class="labels" [(ngModel)]="taskDone.delete" (click)="delet2()">
+            <!-- <app-delete-task [(ngModel)]="task.delete" (click)="delet()"></app-delete-task> -->
+        </div>    
+    </li>
+</ul>

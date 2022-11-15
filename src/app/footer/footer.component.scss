@@ -1,0 +1,20 @@
+footer{
+    min-height: 5vh;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:center;
+    color: rgb(214, 214, 211);
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+    font-weight: lighter;
+}
+
+button{
+    color: white;
+    width: 60px;
+    height: 30px;
+    background-color: #4d90fe;
+}

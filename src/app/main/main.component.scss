@@ -1,0 +1,12 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-items: center;
+    width: 100%;
+    min-height:80vh;
+    background-color: #fbfcfd;
+}
+.newTask{
+    width: 100%;
+}

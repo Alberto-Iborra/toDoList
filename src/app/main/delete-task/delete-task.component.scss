@@ -1,0 +1,11 @@
+.labels{
+    fill: aqua;
+    width: 20px;
+    height: 20px;
+    border: 6px;
+    border-color: #747474;
+    object-fit: cover;
+    ::placeholder{
+        background-color:#b0b0b0
+    }
+}
